@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Word Search Empire Deluxe — The Premium Upgrade for Book Builders</title>
+<meta name="description" content="The Deluxe upgrade for Word Search Empire: shaped grids, hidden messages, clue hunts, kids and large-print editions, a full-wrap cover generator, a bulk book builder and a listing-tag helper. One self-contained file, offline, one-time payment." />
+<meta name="theme-color" content="#16233C" />
+<meta property="og:type" content="product" />
+<meta property="og:title" content="Word Search Empire Deluxe — The Premium Upgrade" />
+<meta property="og:description" content="Shaped grids, hidden messages, clue hunts, a cover generator and a bulk book builder. One self-contained HTML file that runs offline. One-time payment." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316233C'/%3E%3Cg fill='%23E5452B'%3E%3Crect x='6' y='6' width='6' height='6' rx='1'/%3E%3Crect x='20' y='6' width='6' height='6' rx='1'/%3E%3Crect x='6' y='20' width='6' height='6' rx='1'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1'/%3E%3C/g%3E%3Cg fill='%23fff'%3E%3Crect x='13' y='6' width='6' height='6' rx='1'/%3E%3Crect x='6' y='13' width='6' height='6' rx='1'/%3E%3Crect x='20' y='13' width='6' height='6' rx='1'/%3E%3Crect x='13' y='20' width='6' height='6' rx='1'/%3E%3Crect x='20' y='20' width='6' height='6' rx='1'/%3E%3C/g%3E%3C/svg%3E" />
+<style>
+:root{
+  --ink:#16233C; --ink2:#48597C; --paper:#ffffff; --wash:#F1F5FB; --wash2:#E6EEFA;
+  --line:#D6E1F0; --line2:#C2D1E6; --accent:#E5452B; --accentd:#B92F18; --teal:#0E7C7B; --gold:#F6B93B;
+  --maxw:1080px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --disp:"Segoe UI Variable Display","Segoe UI",Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0}
+p{margin:0 0 1em}
+a{color:var(--accentd)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accentd);background:#FDEBE8;border-radius:999px;padding:5px 13px;margin-bottom:16px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:20px;max-width:var(--maxw);margin:0 auto;padding:11px 22px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:1.02rem;text-decoration:none;color:var(--ink);white-space:nowrap}
+.mark{width:29px;height:29px;flex:0 0 auto}
+nav.topnav{margin-left:auto;display:flex;align-items:center;gap:20px}
+nav.topnav a{font-size:.93rem;font-weight:600;text-decoration:none;color:var(--ink2);padding:6px 0;border-bottom:2px solid transparent}
+nav.topnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+@media (max-width:880px){nav.topnav a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--disp);font-weight:800;font-size:1rem;text-decoration:none;border:0;cursor:pointer;padding:15px 26px;border-radius:12px;background:var(--accent);color:#fff;box-shadow:0 5px 0 var(--accentd);transition:transform .08s ease,box-shadow .08s ease}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--accentd)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--accentd)}
+.btn-sm{padding:10px 17px;font-size:.9rem;border-radius:10px;box-shadow:0 4px 0 var(--accentd)}
+.btn-ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line2)}
+.btn-ghost:hover{box-shadow:0 3px 0 var(--line2)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+.hero{background:radial-gradient(1200px 520px at 50% -12%,#22335A 0%,var(--ink) 62%);color:#fff;padding:64px 0 58px;text-align:center;overflow:hidden}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.5rem);margin:0 0 16px}
+.hero .lead{font-size:clamp(1.05rem,2.1vw,1.22rem);color:#C7D3E8;max-width:660px;margin:0 auto 22px}
+.hero .eyebrow{background:rgba(229,69,43,.16);color:#FFB7AA}
+.hero .price{font-family:var(--disp);font-weight:800;font-size:2.3rem;line-height:1;margin:6px 0 2px}
+.hero .price small{font-size:1rem;font-weight:600;color:#9FB0CE}
+.hero .tiny{font-size:.88rem;color:#95A6C4;margin-top:14px}
+.herostack{list-style:none;padding:0;margin:0 auto 26px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:780px}
+.herostack li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 15px;font-size:.9rem;font-weight:600;color:#DCE5F5}
+section{padding:56px 0}
+section.tint{background:var(--wash)}
+h2.sec{font-size:clamp(1.55rem,3.4vw,2.15rem);margin-bottom:12px}
+p.sub{color:var(--ink2);max-width:660px;margin:0 auto}
+.center{text-align:center}
+.cardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media (max-width:900px){.cardgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cardgrid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;box-shadow:0 14px 34px -26px rgba(22,35,60,.5)}
+.card h3{font-size:1.06rem;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:.96rem;margin:0}
+.card .ico{width:34px;height:34px;border-radius:9px;background:#FDEBE8;color:var(--accentd);display:flex;align-items:center;justify-content:center;font-weight:800;font-family:var(--disp);margin-bottom:12px}
+.shotgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+@media (max-width:820px){.shotgrid{grid-template-columns:1fr}}
+.shot{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 18px 40px -30px rgba(22,35,60,.55);margin:0}
+.pvc-h{font-family:var(--disp);font-weight:800;font-size:1.02rem}
+.pvc-s{font-size:.82rem;color:var(--ink2);margin-bottom:10px}
+.pvg{display:grid;border:1px solid var(--line2);border-radius:10px;overflow:hidden;background:#fff}
+.pvg i{display:flex;align-items:center;justify-content:center;aspect-ratio:1;font-style:normal;font-weight:700;font-size:clamp(7px,1.5vw,13px);color:#22303f;border-right:1px solid #EDF1F7;border-bottom:1px solid #EDF1F7}
+.pvg i.b{background:#EDF2F8;border-color:#EDF2F8}
+.pvg i.hl{background:#FBE0DB;color:#8f2413}
+.pvw{list-style:none;margin:12px 0 0;padding:0;columns:2;column-gap:20px;font-size:.82rem;color:var(--ink2)}
+.pvw li{margin:0 0 2px}
+.pvf{text-align:center;font-size:.78rem;color:#93A3BE;margin-top:10px}
+.cap{font-size:.88rem;color:var(--ink2);margin-top:14px;text-align:center}
+.shotwrap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 18px 40px -30px rgba(22,35,60,.5)}
+.pvshot{display:block;width:100%;height:auto;border-radius:8px}
+#previews .row{grid-template-columns:1fr 1fr}
+.row{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;margin-top:8px}
+.row.flip .col-a{order:2}
+@media (max-width:880px){.row{grid-template-columns:1fr;gap:26px}.row.flip .col-a{order:0}}
+.row h2{font-size:clamp(1.4rem,3vw,1.95rem);margin-bottom:12px}
+.row p{color:var(--ink2)}
+.checks{list-style:none;padding:0;margin:16px 0 0}
+.checks li{position:relative;padding:6px 0 6px 30px;font-weight:600}
+.checks li::before{content:"";position:absolute;left:2px;top:.78em;width:15px;height:8px;border-left:2.5px solid var(--teal);border-bottom:2.5px solid var(--teal);transform:rotate(-45deg)}
+.maths{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;font-size:.85rem;background:#0F1A2E;color:#D9E3F5;border-radius:10px;padding:14px 16px;line-height:1.75;overflow-x:auto;margin:0}
+.maths b{color:var(--gold)}
+.cvmock{display:grid;grid-template-columns:34px 1fr 26px;border-radius:6px;overflow:hidden;box-shadow:0 24px 44px -26px rgba(0,0,0,.6);aspect-ratio:16/9;color:#f7f3e8}
+.cvback{background:#0d2416;position:relative;padding:16px 14px}
+.cvspine{background:#0d2416;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cvspine span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.62rem;font-weight:700;letter-spacing:.06em;white-space:nowrap;color:#f7f3e8}
+.cvfront{background:#12331f;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative;overflow:hidden;
+  background-image:linear-gradient(rgba(201,146,44,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,44,.22) 1px,transparent 1px);background-size:22px 22px}
+.cvback{background-color:#12331f;background-image:radial-gradient(circle,rgba(201,146,44,.22) 1.4px,transparent 1.7px);background-size:18px 18px}
+.cvtitle{font-family:var(--disp);font-weight:800;font-size:clamp(1rem,2.6vw,1.5rem);line-height:1.08}
+.cvsub{font-size:.72rem;margin-top:9px;opacity:.92}
+.cvauth{font-size:.64rem;text-transform:uppercase;letter-spacing:.16em;margin-top:14px;opacity:.9}
+.cvrule{width:44px;height:3px;background:var(--gold);margin:11px 0}
+.cvblurb{font-size:.64rem;line-height:1.5;opacity:.92;position:relative;z-index:1}
+.cvbacktag{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-bottom:6px}
+.cvbarcode{position:absolute;right:10px;bottom:10px;width:60px;height:36px;background:#fff;border-radius:3px}
+.cvshot{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 24px 44px -26px rgba(0,0,0,.6)}
+.cvshot + .cvshot{margin-top:16px}
+.honest{background:#fff;border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:0 14px 14px 0;padding:24px 26px;box-shadow:0 18px 40px -30px rgba(22,35,60,.5)}
+.honest h2{margin-bottom:10px;font-size:clamp(1.3rem,2.8vw,1.7rem)}
+.honest p,.honest li{color:var(--ink2)}
+.honest .nope{margin-top:16px}
+table.cmp{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:.95rem}
+.cmpwrap{overflow-x:auto;margin-top:32px;border-radius:14px}
+table.cmp th,table.cmp td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left}
+table.cmp thead th{background:var(--wash2);font-family:var(--disp);font-size:.92rem}
+table.cmp th:last-child,table.cmp td:last-child{text-align:center;width:150px}
+table.cmp tbody tr:last-child td{border-bottom:0}
+.yes{color:var(--teal);font-weight:800}
+.no{color:#9AA7B8;font-weight:700}
+.offerbox{background:var(--ink);color:#fff;border-radius:20px;padding:44px 30px;text-align:center;box-shadow:0 30px 60px -34px rgba(22,35,60,.85)}
+.offerbox .eyebrow{background:rgba(246,185,59,.18);color:var(--gold)}
+.offerbox h2{font-size:clamp(1.5rem,3.4vw,2.05rem);color:#fff}
+.offerbox .price{font-family:var(--disp);font-weight:800;font-size:3rem;line-height:1;margin:14px 0 4px}
+.offerbox .pnote{color:#9FB0CE;font-size:.9rem}
+.offerlist{list-style:none;padding:0;margin:26px auto;max-width:540px;text-align:left;display:grid;gap:9px}
+.offerlist li{position:relative;padding-left:30px;color:#DCE5F5}
+.offerlist li::before{content:"";position:absolute;left:2px;top:.72em;width:15px;height:8px;border-left:2.5px solid var(--gold);border-bottom:2.5px solid var(--gold);transform:rotate(-45deg)}
+.offerbox .tiny{color:#95A6C4;font-size:.86rem;margin-top:16px}
+.guarantee{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 18px;max-width:580px;margin:22px auto 0;font-size:.9rem;color:#C7D3E8}
+.skip{display:inline-block;max-width:100%;margin-top:16px;padding:13px 26px;border-radius:12px;background:#F6C15A;border:1.5px solid #DFA634;color:#3D2B03;font-family:var(--disp);font-weight:800;font-size:.95rem;text-decoration:none;box-shadow:0 4px 0 #C08D22;transition:transform .08s ease,background .12s ease,box-shadow .08s ease}
+.offerbox img{max-width:100%;height:auto}
+.wp-note{color:#8FA0BC;font-size:.82rem;line-height:1.6;max-width:640px;margin:18px auto 0;text-align:left}
+.skip:hover{background:#FFD07A;transform:translateY(-1px);box-shadow:0 5px 0 #C08D22}
+.skip:active{transform:translateY(2px);box-shadow:0 2px 0 #C08D22}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px 20px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--disp);padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;font-weight:800;color:var(--accentd)}
+.faq details[open] summary::after{content:"\2212"}
+.faq .ans{color:var(--ink2);padding-bottom:14px}
+footer{background:var(--ink);color:#B9C6DC;padding:54px 0 40px;font-size:.9rem;margin-top:20px}
+footer h4{color:#fff;font-size:.96rem;margin-bottom:12px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:28px}}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+footer a:hover{border-bottom-color:var(--accent)}
+.disc{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;color:#8FA0BC;line-height:1.65}
+.copyright{margin-top:16px;font-size:.8rem;color:#7C8CA8}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="6" fill="#16233C"/>
+        <rect x="6" y="6" width="6" height="6" rx="1" fill="#E5452B"/>
+        <rect x="20" y="6" width="6" height="6" rx="1" fill="#E5452B"/>
+        <rect x="6" y="20" width="6" height="6" rx="1" fill="#E5452B"/>
+        <rect x="13" y="13" width="6" height="6" rx="1" fill="#E5452B"/>
+        <rect x="13" y="6" width="6" height="6" rx="1" fill="#fff"/>
+        <rect x="6" y="13" width="6" height="6" rx="1" fill="#fff"/>
+        <rect x="20" y="13" width="6" height="6" rx="1" fill="#fff"/>
+        <rect x="13" y="20" width="6" height="6" rx="1" fill="#fff"/>
+        <rect x="20" y="20" width="6" height="6" rx="1" fill="#fff"/>
+      </svg>
+      Word Search Empire
+    </a>
+    <nav class="topnav">
+      <a href="#adds">What you get</a>
+      <a href="#previews">Previews</a>
+      <a href="#cover">Cover builder</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-sm" href="#offer">Get Deluxe</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">One-time upgrade &middot; not a subscription</span>
+    <h1>Word Search Empire <span style="color:var(--gold)">Deluxe</span></h1>
+    <p class="lead">Everything you already have, plus the extras that turn a single puzzle into a finished, ready-to-print book: shaped grids, hidden messages, clue hunts, kids and large-print editions, a full-wrap cover generator, a bulk book builder and a listing-tag helper.</p>
+    <ul class="herostack">
+      <li>One self-contained file</li>
+      <li>Works offline</li>
+      <li>No account, no AI key</li>
+      <li>Nothing you type leaves your device</li>
+    </ul>
+    <div class="price"><span data-price>$47</span> <small>one-time</small></div>
+    <p class="tiny">Instant download &middot; 14-day refund window &middot; no subscription, ever</p>
+    <p style="margin-top:20px;margin-bottom:0"><a class="btn" href="#offer">Get Deluxe &mdash; <span data-price>$47</span></a></p>
+    <p style="margin:0"><a class="skip" href="#" data-skip>No thanks &mdash; continue without the upgrade</a></p>
+  </div>
+</section>
+
+<section id="adds">
+  <div class="wrap center">
+    <span class="eyebrow">What the upgrade adds</span>
+    <h2 class="sec">Seven extras, all built in</h2>
+    <p class="sub">Deluxe is not a different program to learn. It is the same one-file app with a deeper set of tools, so everything you already know still works.</p>
+    <div class="cardgrid" style="text-align:left">
+      <article class="card"><div class="ico">1</div><h3>Shaped grids</h3><p>Place words inside a heart, star, tree, egg, circle or diamond. The cells outside the outline are masked away, so the puzzle itself takes the shape.</p></article>
+      <article class="card"><div class="ico">2</div><h3>Hidden messages</h3><p>Type a phrase and the letters left over once the words are placed spell it out in reading order &mdash; a second puzzle hidden inside the first.</p></article>
+      <article class="card"><div class="ico">3</div><h3>Clue hunts</h3><p>Give a clue instead of the word, and let the solver work out what to look for. Three ready-made clue packs are included, or write your own.</p></article>
+      <article class="card"><div class="ico">4</div><h3>Kids &amp; large-print editions</h3><p>Fewer words, bigger letters and simpler directions for younger solvers, or a large-print layout with a smaller grid for older eyes.</p></article>
+      <article class="card"><div class="ico">5</div><h3>Full-wrap cover generator</h3><p>Front, spine and back on one sheet at the exact size for your trim and page count, with bleed and a clear area reserved for the barcode. Choose from 33 cover themes, 17 motifs and 7 title text styles.</p></article>
+      <article class="card"><div class="ico">6</div><h3>Bulk book builder</h3><p>Type one line per book and build a whole shelf in a single pass. Each book gets its own title page, how-to-play page and answer keys.</p></article>
+      <article class="card"><div class="ico">7</div><h3>Tag &amp; keyword helper</h3><p>Turn the theme you typed into draft Etsy tags and up to seven KDP-style keyword phrases, plus title ideas and a description starter.</p></article>
+      <article class="card" style="background:var(--wash);border-style:dashed"><div class="ico">+</div><h3>And the rest</h3><p>Exact-size printing on Letter, A4, 6&nbsp;&times;&nbsp;9, 5.5&nbsp;&times;&nbsp;8.5 and square, decorative borders, difficulty settings and answer keys throughout.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="previews">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Real output</span>
+      <h2 class="sec">See what it builds</h2>
+      <p class="sub">These previews are drawn from the app&rsquo;s own output, so what you see here is what lands on the page.</p>
+    </div>
+    <div class="row" style="margin-top:34px">
+      <div class="col-a shotwrap"><img class="pvshot" src="assets/preview-puzzle.png" width="1013" height="1313" alt="A standard word-search page built in Deluxe: a letter grid with its word list printed underneath." decoding="async"></div>
+      <div class="col-b">
+        <h3 style="font-size:1.25rem;margin-bottom:8px">Standard word searches</h3>
+        <p>Start from one of 24 built-in themes &mdash; about 280 words each, nearly 6,700 in all &mdash; or paste your own list. The app places every word in one of eight directions, then fills the gaps with random letters. A hidden or shaped style changes only the layout, never the rules.</p>
+        <ul class="checks"><li>24 ready-made themes, about 6,700 words</li><li>Every word placed, grid sized to fit</li><li>Left, right, up, down and both diagonals</li><li>Words are never split or wrapped</li></ul>
+      </div>
+    </div>
+    <div class="row flip" style="margin-top:34px">
+      <div class="col-a shotwrap"><img class="pvshot" src="assets/preview-hidden.png" width="1013" height="1313" alt="A puzzle page with a hidden message: the letters left over spell out a phrase in reading order." decoding="async"></div>
+      <div class="col-b">
+        <h3 style="font-size:1.25rem;margin-bottom:8px">Hidden messages</h3>
+        <p>Give the app a phrase and it threads the leftover letters through the grid in reading order. The puzzle works exactly as normal &mdash; the message is simply waiting in the letters nobody circles.</p>
+        <ul class="checks"><li>Your phrase, spelled out in the spare cells</li><li>Works with any theme or word list</li><li>Ideal for a gift, a party game or a last page</li></ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top:34px">
+      <div class="col-a shotwrap"><img class="pvshot" src="assets/preview-shape.png" width="1013" height="1313" alt="A star-shaped grid built in Deluxe: words sit only inside the outline and the rest of the grid is removed." decoding="async"></div>
+      <div class="col-b">
+        <h3 style="font-size:1.25rem;margin-bottom:8px">Shaped grids</h3>
+        <p>Six outlines &mdash; heart, star, tree, egg, circle and diamond. Words are placed only in the drawn area and the rest of the grid is removed, so a puzzle can carry a theme all by itself.</p>
+        <ul class="checks"><li>Useful for Valentine&rsquo;s, Christmas and Easter books</li><li>Picks a grid size that fits the shape</li><li>Answers still sit at the back of the book</li></ul>
+      </div>
+    </div>
+    <div class="row flip" style="margin-top:34px">
+      <div class="col-a shotwrap"><img class="pvshot" src="assets/preview-answers.png" width="1013" height="1313" alt="An answer-key page from a Deluxe book: each solution is drawn through a miniature grid." decoding="async"></div>
+      <div class="col-b">
+        <h3 style="font-size:1.25rem;margin-bottom:8px">Answer keys</h3>
+        <p>Every book ends with a set of answer pages. Each solution is drawn straight through the letters, so a glance is enough to check the work &mdash; no second copy of the puzzle to compare against.</p>
+        <ul class="checks"><li>Solution lines drawn on a miniature grid</li><li>Four or six answers to a page, cleanly spaced</li><li>Included in every book the app builds</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cover">
+  <div class="wrap">
+    <div class="row">
+      <div class="col-a">
+        <span class="eyebrow">Cover generator</span>
+        <h2>A full wrap, measured for you</h2>
+        <p>Give the app a title, a subtitle, an author, a blurb and your page count. It works out the spine from the paper type, adds the bleed around every edge and lays the whole thing out as one print-ready sheet &mdash; front, spine and back together.</p>
+        <p>Thirty-three cover themes, seventeen background motifs and seven title text styles are included, so a shelf of books does not look like one template repeated. A clear rectangle is reserved at the foot of the back cover for the barcode, and the text keeps a safe margin from the trim.</p>
+        <p style="margin-bottom:8px"><b>How the spine is worked out</b></p>
+        <div class="maths">
+spine (in) = pages &times; <b>0.002252</b>  white paper<br>
+spine (in) = pages &times; <b>0.002500</b>  cream paper<br>
+<span style="color:#8FA0BC">120 pages, white &rarr; 0.270 in spine</span><br>
+full wrap  = 2 &times; 8.5 + 0.270 + 2 &times; 0.125 bleeding<br>
+<span style="color:#8FA0BC">&rarr; 17.520 &times; 11.250 in</span>
+        </div>
+        <p class="tiny" style="color:var(--ink2);font-size:.86rem;margin-top:12px">Paper weights and printing practices differ. Always compare the finished file against the current template for your printer, trim size and page count before you upload, and adjust the page count in the app if the printer asks for it.</p>
+      </div>
+      <div class="col-b">
+        <img class="cvshot" src="assets/cover-wrap-1.png" width="1092" height="703" alt="A full-wrap cover built in Word Search Empire Deluxe: the back cover with its blurb and the reserved barcode area, the spine, and the front cover with the title and subtitle." decoding="async">
+        <img class="cvshot" src="assets/cover-wrap-2.png" width="1091" height="700" alt="A second full-wrap cover, in a different colour palette, also built in Word Search Empire Deluxe." decoding="async">
+        <p class="cap">Two real full-wrap covers built in Deluxe. Each one is a single sheet &mdash; back, spine and front &mdash; measured for the trim and page count, with the barcode area left clear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="bulk">
+  <div class="wrap">
+    <div class="row flip">
+      <div class="col-a">
+        <span class="eyebrow">Bulk builder &amp; listing helper</span>
+        <h2>One line per book, a shelf in a pass</h2>
+        <p>Write a list &mdash; <em>Christmas Word Searches | Christmas</em> &mdash; and Deluxe builds each book in turn, with its own title page, how-to-play page, puzzles and answer keys. Preview any book on its own, or print the whole shelf into a single PDF with each title starting on a fresh page.</p>
+        <p>The tag helper then drafts a listing for you: thirteen Etsy-style tags of twenty characters or fewer, up to seven keyword phrases, a handful of title ideas and a description starter. It is a way to save typing &mdash; you still decide what to publish and how to describe it.</p>
+        <ul class="checks"><li>Themes matched by name, or your own word lists</li><li>Standard and hidden-message puzzles in bulk</li><li>Everything generated on your device</li></ul>
+      </div>
+      <div class="col-b">
+        <div class="shotwrap" style="font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.84rem;color:#22303f;line-height:1.9">
+          <div style="color:#93A3BE;margin-bottom:6px">Bulk shelf &mdash; one line per book</div>
+          Christmas Word Searches | Christmas<br>
+          Halloween Puzzle Book | Halloween<br>
+          Gardeners&rsquo; Word Searches | Garden<br>
+          Ocean Puzzles for Kids | Ocean<br>
+          <div style="margin-top:14px;color:#0E7C7B;font-weight:700">Built 4 books &middot; 96 pages in all</div>
+          <div style="margin-top:14px;color:#93A3BE">Etsy tags &mdash; 13 &times; &le;20 characters</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;font-family:var(--sans)">
+            <span style="background:#F1F5FB;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.8rem">christmas word search</span>
+            <span style="background:#F1F5FB;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.8rem">large print puzzles</span>
+            <span style="background:#FDEBE8;border:1px solid #F5C4BB;border-radius:999px;padding:5px 13px;font-weight:800;font-size:.9rem;color:#8f2413">7 puzzles ready to print</span>
+          </div>
+        </div>
+        <p class="cap">An illustration of the bulk list and the tag helper, not a promise about listings or sales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="honest">
+  <div class="wrap">
+    <div class="honest">
+      <h2>What Deluxe is &mdash; and what it is not</h2>
+      <p>Deluxe is a fast, private tool for making puzzle books. It saves you time on the fiddly parts: placing words, laying out pages, sizing a cover, checking answers. That is all it does, and it does it well.</p>
+      <p class="nope">To be straight with you, it does <b>not</b>:</p>
+      <ul>
+        <li>upload anything to Amazon, KDP, Etsy or any other shop &mdash; you publish by hand;</li>
+        <li>write your listing, choose your niche or design your brand for you;</li>
+        <li>promise sales, rankings, reviews, approvals or any particular result;</li>
+        <li>need an account, a subscription, an internet connection or an AI key;</li>
+        <li>send anything you type anywhere. The file runs in your browser and stays there.</li>
+      </ul>
+      <p class="nope">People who make puzzle books sell very different numbers of them. Some sell none. What you build and how you market it is entirely up to you. This is a tool, not a business in a box.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="compare">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Side by side</span>
+      <h2 class="sec">Deluxe against the standard app</h2>
+      <p class="sub">Deluxe is sold as an upgrade. You can run it on its own, but it is designed to sit alongside the books you already build.</p>
+    </div>
+    <table class="cmp" style="margin-top:30px">
+      <thead>
+        <tr><th>Feature</th><th>Word Search Empire</th><th style="color:var(--accentd)">Deluxe</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Themed word searches &amp; your own word lists</td><td class="center">Included</td><td class="center"><b>Included</b></td></tr>
+        <tr><td>Book builder with title and how-to-play pages</td><td class="center">Included</td><td class="center"><b>Included</b></td></tr>
+        <tr><td>Answer keys at the back</td><td class="center">&#10003;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Exact-size printing, five trims</td><td class="center">&#10003;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Shaped grids</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Hidden messages</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Clue hunts</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Kids and large-print editions</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Full-wrap cover generator</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Bulk book builder</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+        <tr><td>Tag &amp; keyword helper</td><td class="center">&ndash;</td><td class="center">&#10003;</td></tr>
+      </table>
+    </div>
+  </section>
+
+<span id="offer"></span>
+<section class="offer">
+  <div class="wrap">
+    <div class="offerbox">
+      <span class="eyebrow">One-time purchase</span>
+      <h2>Word Search Empire Deluxe</h2>
+      <p class="sub" style="color:#C7D3E8;margin:6px auto 0">The complete upgrade, delivered as one self-contained file.</p>
+      <div class="price" data-price>$47</div>
+      <div class="pnote">one-time price &middot; no subscription, ever</div>
+      <ul class="offerlist">
+        <li>The Deluxe app &mdash; a single HTML file you keep for good.</li>
+        <li>Shaped grids, hidden messages and clue hunts.</li>
+        <li>Kids and large-print editions.</li>
+        <li>Full-wrap cover generator with spine maths, barcode area, 33 cover themes, 17 motifs and 7 title styles.</li>
+        <li>Bulk book builder for whole shelves at a time.</li>
+        <li>Tag &amp; keyword helper with title and description starters.</li>
+        <li>Exact-size printing on five popular trims.</li>
+        <li>Free updates to the Deluxe file.</li>
+      </ul>
+      <p><!-- WarriorPlus hosted buy button (required by WarriorPlus) --><a href="https://warriorplus.com/o2/buy/srwmfg/vxlbnk/sy4hsx"><img src="https://warriorplus.com/o2/btn/fn020011000/srwmfg/vxlbnk/476913?ct2=GET%20ACCESS%20NOW"></a></p>
+      <p style="margin:0"><a class="skip" id="skipLink" href="#" data-skip>No thanks &mdash; continue without the upgrade</a></p>
+      <p class="wp-note"><b style="color:#DCE5F5">Disclaimer:</b> WarriorPlus is used to help manage the sale of products on this site. While WarriorPlus helps facilitate the sale, all payments are made directly to the product vendor and NOT WarriorPlus. Thus, all product questions, support inquiries and/or refund requests must be sent to the vendor. WarriorPlus's role should not be construed as an endorsement, approval or review of these products or any claim, statement or opinion used in the marketing of these products.</p>
+      <div class="guarantee">Buy with confidence: if Deluxe is not right for you, ask for a refund within 14 days of purchase, as set out in our <a href="refund-policy.html" style="color:#fff">Refund Policy</a>. Please read the <a href="earnings-results-disclaimer.html" style="color:#fff">Disclaimer</a> too &mdash; it explains, plainly, that no particular result is promised.</div>
+      <p class="tiny">You will be taken to our secure checkout. Access details follow immediately by email. Works offline. Nothing you type leaves your device.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="center"><span class="eyebrow">Questions</span><h2 class="sec">Before you buy</h2></div>
+    <div class="faq" style="margin-top:30px">
+      <details><summary>Do I need the main app for Deluxe to work?</summary><div class="ans">No. Deluxe is a complete, standalone file with its own theme library. It is sold as an upgrade because it builds on the same idea, and it sits happily alongside the books you already make &mdash; but it does not need anything else to run.</div></details>
+      <details><summary>Does it need an internet connection?</summary><div class="ans">No. Once the file is on your device it opens and runs with no network at all. There is nothing to sign into and nothing to activate.</div></details>
+      <details><summary>Do I need an AI subscription or an API key?</summary><div class="ans">No. Every puzzle is generated by the app itself, on your computer. There is no AI service involved and no key to enter.</div></details>
+      <details><summary>Is anything I type sent anywhere?</summary><div class="ans">No. The page makes no third-party requests. Your themes, titles, blurbs and word lists stay in your browser.</div></details>
+      <details><summary>Will this help me sell books?</summary><div class="ans">It can save you time making books and writing a listing, which is part of the work. It cannot promise sales, rankings, reviews or approvals, and it will not upload anything to a shop for you. How well a book does depends on the market, the cover, the listing and your own effort &mdash; none of which we control.</div></details>
+      <details><summary>What do I need to actually publish a book?</summary><div class="ans">A print-on-demand account (such as KDP) or a printer, a shop or marketplace account, and the time to write your listing and upload your files. Deluxe gives you the interior and the cover; you supply the rest. It is not affiliated with Amazon, Kindle Direct Publishing or Etsy.</div></details>
+      <details><summary>Which page sizes are supported?</summary><div class="ans">Letter (8.5 &times; 11 in), A4, 6 &times; 9 in, 5.5 &times; 8.5 in and 8.5 &times; 8.5 in square. The cover generator uses the same trim you choose, plus the page count, to work out the spine.</div></details>
+      <details><summary>What is the refund policy?</summary><div class="ans">You may request a refund within 14 days of purchase. The full terms are in our <a href="refund-policy.html">Refund Policy</a>.</div></details>
+      <details><summary>How do I get help?</summary><div class="ans">Email <a href="#" id="supportLink">our support address</a> and we will reply as soon as we can. Please include your order reference.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Word Search Empire Deluxe</h4>
+        <p style="color:#B9C6DC">One self-contained file that builds word search books offline: shaped grids, hidden messages, clue hunts, covers, bulk builds and answer keys.</p>
+      </div>
+      <div>
+        <h4>The funnel</h4>
+        <ul>
+          <li><a href="#adds">What you get</a></li>
+          <li><a href="#previews">Previews</a></li>
+          <li><a href="#cover">Cover builder</a></li>
+          <li><a href="#offer">Get Deluxe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="earnings-results-disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disc">
+      <p><b style="color:#DCE5F5">No results are promised.</b> Word Search Empire Deluxe is a software tool for creating puzzle books. It does not guarantee sales, income, rankings, reviews, approvals or any other outcome. Any figures you may see elsewhere are illustrations, not promises. Nothing on this page is financial, legal or business advice.</p>
+      <p><b style="color:#DCE5F5">Affiliates.</b> If you reached this page through an affiliate link, the person who referred you may be paid a commission when you buy. It does not change the price you pay. We are the vendor of this product.</p>
+      <p><b style="color:#DCE5F5">Not affiliated.</b> Amazon, Kindle Direct Publishing, Etsy and WarriorPlus are trademarks of their respective owners. We are not affiliated with, endorsed by or sponsored by any of them. Product names are used only to describe what the tool helps you do.</p>
+      <p>Deluxe is an upgrade to Word Search Empire. It does not include the word packs or the book library sold separately elsewhere in this funnel.</p>
+    <p class="copyright">&copy; <span id="year">2026</span> Word Search Empire. All rights reserved. Made in the United Kingdom. Prices in US dollars.</p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/json" id="pvdata">{"puzzle":{"n":12,"title":"Animals","sub":"Standard word search &middot; 12 \u00d7 12","letters":"UONHZQHBUSPXOGIMNYMTDTBSYNHOGLPIPNPMGEPPOFRGEASTZHLLMRAENHQBEYONTEBRGPUDBLDQITBFUEIYRJGSGTINILRHAFSEOUTWNERRNYFDIBSPUUEKEFFARIGOWULXRCFHEDGEHOGV","words":["BUTTERFLY","DOLPHIN","ELEPHANT","GIRAFFE","HEDGEHOG","PENGUIN","RABBIT","SQUIRREL","TIGER","ZEBRA"],"foot":"7"},"hidden":{"n":12,"letters":"MEHTAERWRRYCGNIKCOTSHRISLTREEDNIERMASEMRVZMHCYHRAZSTRIKAGCXGRKHNSXRDXSHABUDAIOLWENGRIPNZLTEOGSILJTWVCTGJOTEAAPRESENTKLLNCNLKXDAOXSSDUKDOVEODJONK","words":["ANGEL","CAROL","GARLAND","PRESENT","REINDEER","SANTA","SLEIGH","STOCKING","TINSEL","WREATH"],"foot":"12"},"shape":{"n":14,"letters":"###############VAGOYBVTCYIB#IPORDWONSJNRKQVLCFRYWDCOORDBVIOLETIHIYESORBLUEBELLPHPEGIBYNRFGDQYDCPBONGCGYNZVSAERBA#EPXLIEANIGOO###LGUGAHASRM#####ATULIPYB#######HXYFNN##########EC####################","mask":"0000000000000001111111111110111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111111111100011111111110000011111111000000011111100000000001100000000000000000000","words":["BLUEBELL","DAISY","LILY","ORCHID","PANSY","PEONY","ROSE","SNOWDROP","TULIP","VIOLET"],"foot":"3"},"answers":{"n":12,"hits":"001000000000001001010100001001011100001001111110101001111110101001111110101001101110100001101110100001101110000001000010111111100010000111111110","words":["BUTTERFLY","DOLPHIN","ELEPHANT","GIRAFFE","HEDGEHOG","PENGUIN","RABBIT","SQUIRREL","TIGER","ZEBRA"],"foot":"Answers"}}</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ------------------------------------------------------------------
+     Draw the preview grids from the app's own output (captured above).
+     Pure local rendering - no requests, no libraries.
+  ------------------------------------------------------------------ */
+  var PV = {};
+  try { PV = JSON.parse(document.getElementById("pvdata").textContent); } catch (e) { PV = {}; }
+
+  function cells(d, mode) {
+    var n = d.n, out = "", i, ch, blank;
+    var src = d.letters || (PV.puzzle ? PV.puzzle.letters : "");
+    for (i = 0; i < n * n; i++) {
+      ch = src.charAt(i);
+      blank = (ch === "#") || (!!d.mask && d.mask.charAt(i) === "0");
+      if (blank) { out += '<i class="b"></i>'; }
+      else if (mode === "ans") { out += '<i class="' + (d.hits.charAt(i) === "1" ? "hl" : "") + '">' + ch + "</i>"; }
+      else { out += "<i>" + ch + "</i>"; }
+    }
+    return '<div class="pvg" style="grid-template-columns:repeat(' + n + ',1fr)">' + out + "</div>";
+  }
+  function list(words) {
+    return '<ul class="pvw">' + words.map(function (w) { return "<li>" + w + "</li>"; }).join("") + "</ul>";
+  }
+  function head(title, sub) {
+    return '<div class="pvc-h">' + title + '</div><div class="pvc-s">' + sub + "</div>";
+  }
+  function foot(t) { return '<div class="pvf">' + t + "</div>"; }
+
+  var mounts = document.querySelectorAll("[data-shot]");
+  Array.prototype.forEach.call(mounts, function (m) {
+    var key = m.getAttribute("data-shot"), html = "";
+    if (key === "puzzle" && PV.puzzle) {
+      html = head("Animals", "Standard word search &middot; 12 &times; 12") + cells(PV.puzzle, "puz") +
+             list(PV.puzzle.words) + foot("Page 7");
+    } else if (key === "hidden" && PV.hidden) {
+      html = head("Christmas", "Hidden message &middot; the spare letters spell it") + cells(PV.hidden, "puz") +
+             list(PV.hidden.words) + foot("Page 12");
+    } else if (key === "shape" && PV.shape) {
+      html = head("Flowers", "Heart-shaped grid &middot; 14 &times; 14") + cells(PV.shape, "puz") +
+             list(PV.shape.words) + foot("Page 3");
+    } else if (key === "answers" && PV.answers) {
+      html = head("Answers", "Solution lines drawn on each grid") + cells(PV.answers, "ans") +
+             foot("Answers");
+    }
+    m.innerHTML = html;
+  });
+
+  /* ------------------------------------------------------------------
+     Checkout wiring.
+  ------------------------------------------------------------------ */
+  var BUY_URL        = "https://warriorplus.com/o2/buy/srwmfg/vxlbnk/sy4hsx";  // WarriorPlus order link
+  var SKIP_URL       = "https://warriorplus.com/o2/no_thanks/vxlbnk";  // where "No thanks" goes (next step or thank-you page)
+  var PRICE          = "$47";                     // shown wherever data-price appears
+  var SUPPORT        = "ayoubebay1@gmail.com";    // your support address
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-price]"), function (el) { el.textContent = PRICE; });
+  if (BUY_URL) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-buy]"), function (el) { el.setAttribute("href", BUY_URL); el.setAttribute("rel", "noopener"); });
+  }
+  if (SKIP_URL) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-skip]"), function (el) { el.setAttribute("href", SKIP_URL); el.setAttribute("rel", "noopener"); });
+  }
+  var sl = document.getElementById("supportLink");
+  if (sl) { sl.textContent = SUPPORT; sl.setAttribute("href", "mailto:" + SUPPORT); }
+  var y = document.getElementById("year");
+  if (y) { y.textContent = String(new Date().getFullYear()); }
+})();
+</script>
+<!-- WarriorPlus sales-page code (required by WarriorPlus — do not remove).
+     Powers buttons, tracking and disclaimer behaviour for this offer (vxlbnk). -->
+<script type="text/javascript" src="https://warriorplus.com/o2/js/vxlbnk" defer></script>
+</body>
+</html>
